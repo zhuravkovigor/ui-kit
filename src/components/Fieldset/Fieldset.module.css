@@ -1,0 +1,32 @@
+.fieldset {
+  border: 0;
+  display: grid;
+  gap: var(--ui-space-3);
+  margin: 0;
+  min-inline-size: 0;
+  padding: 0;
+}
+
+.legend {
+  color: var(--ui-color-text);
+  font-family: var(--ui-font-family);
+  font-size: var(--ui-font-size-md);
+  font-weight: 600;
+  line-height: var(--ui-line-height);
+  padding: 0;
+}
+
+.hint,
+.error {
+  font-family: var(--ui-font-family);
+  font-size: var(--ui-font-size-sm);
+  line-height: var(--ui-line-height);
+}
+
+.hint {
+  color: var(--ui-color-text-muted);
+}
+
+.error {
+  color: var(--ui-color-danger);
+}

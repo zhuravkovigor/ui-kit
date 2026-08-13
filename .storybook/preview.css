@@ -1,0 +1,29 @@
+:root {
+  --ui-color-accent: #10a37f;
+  --ui-color-accent-hover: #21b994;
+  --ui-color-border: #4b4b4b;
+  --ui-color-danger: #ff8977;
+  --ui-color-focus: #39c6a2;
+  --ui-color-surface: #292929;
+  --ui-color-surface-subtle: #202020;
+  --ui-color-text: #f2f2f2;
+  --ui-color-text-muted: #b5b5b5;
+  background: #171717;
+  color: var(--ui-color-text);
+}
+
+body {
+  background: #171717;
+  color: var(--ui-color-text);
+}
+
+.storybook-canvas {
+  align-items: center;
+  background: #171717;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  width: 100%;
+}

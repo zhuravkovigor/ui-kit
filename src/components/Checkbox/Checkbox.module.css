@@ -1,0 +1,54 @@
+.field {
+  display: grid;
+  gap: var(--ui-space-2);
+}
+
+.control {
+  align-items: flex-start;
+  color: var(--ui-color-text);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--ui-font-family);
+  font-size: var(--ui-font-size-sm);
+  gap: var(--ui-space-2);
+  line-height: var(--ui-line-height);
+}
+
+.checkbox {
+  accent-color: var(--ui-color-accent);
+  block-size: 1rem;
+  flex: 0 0 auto;
+  inline-size: 1rem;
+  margin: 0.25rem 0 0;
+}
+
+.checkbox:focus-visible {
+  box-shadow: var(--ui-focus-ring);
+  outline: none;
+}
+
+.checkbox:disabled + .label {
+  color: var(--ui-color-text-muted);
+  cursor: not-allowed;
+}
+
+.required {
+  color: var(--ui-color-danger);
+}
+
+.hint,
+.error {
+  font-family: var(--ui-font-family);
+  font-size: var(--ui-font-size-sm);
+  line-height: var(--ui-line-height);
+}
+
+.hint {
+  color: var(--ui-color-text-muted);
+  padding-inline-start: 1.5rem;
+}
+
+.error {
+  color: var(--ui-color-danger);
+  padding-inline-start: 1.5rem;
+}
