@@ -47,8 +47,8 @@ export const Conversation: Story = {
         What is the capital of France?
       </MessageBubble>
       <MessageBubble author="assistant" timestamp="12:30">
-        The capital of France is Paris. It has been the country's political
-        and cultural center for centuries.
+        The capital of France is Paris. It has been the country's political and
+        cultural center for centuries.
       </MessageBubble>
       <MessageBubble author="user" timestamp="12:31" status="sending">
         Thanks! And what about Italy?

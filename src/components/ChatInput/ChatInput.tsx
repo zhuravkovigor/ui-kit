@@ -5,11 +5,10 @@ import {
   useRef,
   type FormEvent,
   type KeyboardEvent,
+  type ReactNode,
   type TextareaHTMLAttributes,
 } from "react";
-import { Paperclip, SendHorizontal } from "lucide-react";
-
-import { Button } from "../Button";
+import { ArrowUp, Mic, Plus } from "lucide-react";
 
 import styles from "./ChatInput.module.css";
 
@@ -23,6 +22,9 @@ export interface ChatInputProps extends Omit<
   sending?: boolean;
   onAttach?: () => void;
   attachLabel?: string;
+  onVoice?: () => void;
+  voiceLabel?: string;
+  actions?: ReactNode;
 }
 
 function resizeTextarea(textarea: HTMLTextAreaElement, maxRows: number) {
@@ -36,6 +38,7 @@ function resizeTextarea(textarea: HTMLTextAreaElement, maxRows: number) {
 export const ChatInput = forwardRef<HTMLTextAreaElement, ChatInputProps>(
   function ChatInput(
     {
+      actions,
       attachLabel = "Attach file",
       className,
       disabled = false,
@@ -44,10 +47,12 @@ export const ChatInput = forwardRef<HTMLTextAreaElement, ChatInputProps>(
       onChange,
       onKeyDown,
       onSend,
+      onVoice,
       placeholder = "Message...",
       sendLabel = "Send",
       sending = false,
       value,
+      voiceLabel = "Voice input",
       ...props
     },
     ref,
@@ -107,17 +112,15 @@ export const ChatInput = forwardRef<HTMLTextAreaElement, ChatInputProps>(
     return (
       <form className={styles.form} onSubmit={handleSubmit}>
         {onAttach ? (
-          <Button
+          <button
             aria-label={attachLabel}
-            className={styles.attach}
+            className={styles.action}
             disabled={disabled || sending}
             onClick={onAttach}
-            size="small"
             type="button"
-            variant="ghost"
           >
-            <Paperclip aria-hidden="true" size={16} />
-          </Button>
+            <Plus aria-hidden="true" size={18} />
+          </button>
         ) : null}
         <textarea
           {...props}
@@ -133,17 +136,30 @@ export const ChatInput = forwardRef<HTMLTextAreaElement, ChatInputProps>(
           }}
           onKeyDown={handleKeyDown}
         />
-        <Button
+        {actions}
+        {onVoice ? (
+          <button
+            aria-label={voiceLabel}
+            className={styles.action}
+            disabled={disabled || sending}
+            onClick={onVoice}
+            type="button"
+          >
+            <Mic aria-hidden="true" size={18} />
+          </button>
+        ) : null}
+        <button
           aria-label={sendLabel}
           className={styles.send}
-          disabled={disabled}
-          loading={sending}
-          loadingLabel="Sending"
-          size="small"
+          disabled={disabled || sending}
           type="submit"
         >
-          <SendHorizontal aria-hidden="true" size={16} />
-        </Button>
+          {sending ? (
+            <span className={styles.spinner} aria-label="Sending" />
+          ) : (
+            <ArrowUp aria-hidden="true" size={18} />
+          )}
+        </button>
       </form>
     );
   },

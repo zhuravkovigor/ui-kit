@@ -32,6 +32,21 @@ export const WithAttachment: Story = {
   },
 };
 
+export const FullFeatured: Story = {
+  args: {
+    onAttach: () => {},
+    onVoice: () => {},
+    placeholder: "Ask anything",
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ width: "40rem" }}>
+        <Story />
+      </div>
+    ),
+  ],
+};
+
 export const Disabled: Story = {
   args: {
     disabled: true,
