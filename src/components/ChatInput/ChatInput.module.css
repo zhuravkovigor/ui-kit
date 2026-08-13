@@ -1,5 +1,5 @@
 .form {
-  align-items: flex-end;
+  align-items: center;
   background: var(--ui-color-surface-subtle);
   border: 1px solid var(--ui-color-border);
   border-radius: var(--ui-radius-full);
@@ -33,7 +33,7 @@
   font-size: var(--ui-font-size-sm);
   line-height: var(--ui-line-height);
   max-block-size: none;
-  min-block-size: 2rem;
+  min-block-size: 1.5rem;
   min-inline-size: 0;
   outline: none;
   padding: var(--ui-space-1) var(--ui-space-2);

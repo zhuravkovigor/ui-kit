@@ -1,1 +1,15 @@
+@import "@fontsource-variable/inter";
 @import "./tokens.css";
+
+:root {
+  font-family: var(--ui-font-family);
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--ui-font-family);
+}

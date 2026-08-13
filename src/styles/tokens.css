@@ -12,7 +12,8 @@
   --ui-color-accent-hover: #0d8c6d;
   --ui-color-danger: #b42318;
   --ui-color-focus: #0d0d0d;
-  --ui-font-family: "Suisse Intl", "Inter", "Helvetica Neue", sans-serif;
+  --ui-font-family: "Inter Variable", "Inter", "Helvetica Neue", system-ui,
+    sans-serif;
   --ui-font-size-sm: 0.875rem;
   --ui-font-size-md: 1rem;
   --ui-line-height: 1.5;
