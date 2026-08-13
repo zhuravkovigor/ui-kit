@@ -52,7 +52,8 @@
 }
 
 .codeTag {
-  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace !important;
+  font-family:
+    "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace !important;
   font-size: 0.8125rem !important;
   line-height: 1.6 !important;
 }
