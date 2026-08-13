@@ -1,0 +1,58 @@
+.block {
+  background: var(--ui-color-surface-subtle);
+  border-radius: var(--ui-radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.language {
+  color: var(--ui-color-text-muted);
+  font-family: var(--ui-font-family);
+  font-size: 0.75rem;
+  font-weight: 500;
+  inset-block-start: var(--ui-space-4);
+  inset-inline-start: var(--ui-space-4);
+  line-height: 1.25;
+  position: absolute;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.copy {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: var(--ui-radius-sm);
+  color: var(--ui-color-text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  inset-block-start: calc(var(--ui-space-4) - 0.21875rem);
+  inset-inline-end: var(--ui-space-3);
+  justify-content: center;
+  padding: var(--ui-space-1);
+  position: absolute;
+  transition:
+    background-color var(--ui-transition-fast),
+    color var(--ui-transition-fast);
+  z-index: 1;
+}
+
+.copyRound {
+  border-radius: var(--ui-radius-full);
+}
+
+.copy:hover {
+  background: var(--ui-color-surface-hover);
+  color: var(--ui-color-text);
+}
+
+.copy:focus-visible {
+  box-shadow: var(--ui-focus-ring);
+  outline: none;
+}
+
+.codeTag {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.6 !important;
+}

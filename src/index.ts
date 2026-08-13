@@ -8,6 +8,8 @@ export { ChatInput } from "./components/ChatInput";
 export type { ChatInputProps } from "./components/ChatInput";
 export { Checkbox } from "./components/Checkbox";
 export type { CheckboxProps } from "./components/Checkbox";
+export { CodeBlock } from "./components/CodeBlock";
+export type { CodeBlockProps } from "./components/CodeBlock";
 export { Input } from "./components/Input";
 export type { InputProps } from "./components/Input";
 export { Fieldset } from "./components/Fieldset";
