@@ -27,3 +27,7 @@ body {
   padding: 2rem;
   width: 100%;
 }
+
+.storybook-canvas > * {
+  width: 100%;
+}

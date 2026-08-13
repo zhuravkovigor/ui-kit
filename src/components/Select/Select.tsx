@@ -136,11 +136,12 @@ export const Select = forwardRef<HTMLButtonElement, SelectProps>(
             onKeyDown={handleKeyDown}
           >
             <span
-              className={
-                [styles.value, selectedOption ? undefined : styles.placeholder]
-                  .filter(Boolean)
-                  .join(" ")
-              }
+              className={[
+                styles.value,
+                selectedOption ? undefined : styles.placeholder,
+              ]
+                .filter(Boolean)
+                .join(" ")}
             >
               {selectedOption?.label ?? placeholder}
             </span>

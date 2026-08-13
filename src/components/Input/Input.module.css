@@ -1,6 +1,8 @@
 .field {
   display: grid;
   gap: var(--ui-space-2);
+  min-width: var(--ui-field-min-width);
+  width: 100%;
 }
 
 .label {
