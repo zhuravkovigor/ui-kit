@@ -1,8 +1,4 @@
-import {
-  forwardRef,
-  type HTMLAttributes,
-  type ElementType,
-} from "react";
+import { forwardRef, type HTMLAttributes, type ElementType } from "react";
 
 import styles from "./Typography.module.css";
 
@@ -35,14 +31,7 @@ const defaultElements: Record<string, ElementType> = {
 
 export const Typography = forwardRef<HTMLElement, TypographyProps>(
   function Typography(
-    {
-      as,
-      children,
-      className,
-      color = "default",
-      variant = "body",
-      ...props
-    },
+    { as, children, className, color = "default", variant = "body", ...props },
     ref,
   ) {
     const Component = as ?? defaultElements[variant] ?? "p";

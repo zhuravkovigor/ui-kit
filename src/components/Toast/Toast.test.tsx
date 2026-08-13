@@ -31,7 +31,9 @@ describe("Toast", () => {
       </Toast>,
     );
 
-    await user.click(screen.getByRole("button", { name: "Close notification" }));
+    await user.click(
+      screen.getByRole("button", { name: "Close notification" }),
+    );
 
     expect(onClose).toHaveBeenCalled();
   });

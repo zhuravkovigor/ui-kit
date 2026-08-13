@@ -55,8 +55,15 @@ export const Colors: Story = {
 export const Inline: Story = {
   render: () => (
     <Typography variant="body">
-      Text with <Typography variant="code" as="code">inline code</Typography>{" "}
-      and <Typography variant="caption" as="span">caption text</Typography>.
+      Text with{" "}
+      <Typography variant="code" as="code">
+        inline code
+      </Typography>{" "}
+      and{" "}
+      <Typography variant="caption" as="span">
+        caption text
+      </Typography>
+      .
     </Typography>
   ),
 };

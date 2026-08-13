@@ -1,72 +1,81 @@
-# @zhuravkovigor/ui-kit
+# UI Kit
 
-Accessible React form controls with a quiet, neutral visual language.
+Accessible React components with a clean, minimalist design inspired by OpenAI's interface.
 
-## Install
+## Features
 
-```bash
-npm install @zhuravkovigor/ui-kit
-```
-
-`react` and `react-dom` are peer dependencies. The package supports React 18 and newer.
-
-## Use
-
-Import the components and the stylesheet once in your application entry point.
-
-```tsx
-import { Button, Input, Textarea } from "@zhuravkovigor/ui-kit";
-import "@zhuravkovigor/ui-kit/styles.css";
-
-export function ContactForm() {
-  return (
-    <form>
-      <Input
-        label="Email"
-        name="email"
-        type="email"
-        hint="We only use this to reply."
-        required
-      />
-      <Textarea label="Message" name="message" rows={5} />
-      <Button type="submit">Send message</Button>
-    </form>
-  );
-}
-```
+- 🎨 **Modern Design**: Rounded corners, subtle shadows, and smooth transitions
+- ♿ **Accessible**: ARIA attributes, keyboard navigation, and screen reader support
+- 🎯 **Type-Safe**: Full TypeScript support with strict types
+- 🎭 **Customizable**: CSS custom properties for theming
+- 📦 **Lightweight**: Tree-shakeable ESM exports
 
 ## Components
 
-- `Button`: `variant` (`primary`, `secondary`, `ghost`), `size` (`small`, `medium`, `large`), `fullWidth`, `loading`, and native button props.
-- `Input`: `label`, `hint`, `error`, `controlSize` (`small`, `medium`, `large`), and native input props.
-- `Textarea`: `label`, `hint`, `error`, and native textarea props.
+### Form Controls
 
-All controls forward refs and preserve native form behavior. Labels, hints, and errors are connected to their controls with accessible attributes.
+- **Button**: Primary, secondary, and ghost variants with loading states
+- **Input**: Text input with label, hint, and error states
+- **Textarea**: Multiline text input with auto-resize
+- **Select**: Custom dropdown with keyboard navigation
+- **Checkbox**: Custom-styled checkbox with checkmark animation
+- **Fieldset**: Semantic grouping for related form controls
+
+### Chat Components
+
+- **ChatInput**: Auto-growing message input with send button and attachments
+- **MessageBubble**: User and assistant message bubbles with avatars
+- **TypingIndicator**: Animated "typing..." indicator
+- **Avatar**: User and assistant avatars with initials or images
+
+### Display
+
+- **CodeBlock**: Syntax-highlighted code with copy button
+- **Typography**: Headings, body text, and inline code with consistent styling
+- **Toast**: Notification toasts with success, error, warning, and info states
+
+## Usage
+
+```tsx
+import { Button, Input, ChatInput, Toast } from "./components";
+import "./styles/index.css";
+
+function App() {
+  return (
+    <>
+      <Input label="Email" type="email" required />
+      <Button variant="primary">Submit</Button>
+      
+      <ChatInput
+        placeholder="Ask anything..."
+        onSend={(msg) => console.log(msg)}
+      />
+      
+      <Toast status="success" title="Saved">
+        Your changes have been saved.
+      </Toast>
+    </>
+  );
+}
+```
 
 ## Development
 
 ```bash
 npm install
-npm run typecheck
-npm test
-npm run build
+npm test              # Run tests
+npm run typecheck     # Type checking
+npm run storybook     # Component catalog at localhost:6006
 ```
 
-## Component Catalog
+## Design Tokens
 
-Browse every component, state, and prop control locally with Storybook:
+All components use CSS custom properties defined in `src/styles/tokens.css`:
 
-```bash
-npm run storybook
-```
-
-The catalog is available at `http://localhost:6006`. Generate a static version with `npm run build-storybook`.
-
-Before publishing, inspect the package contents:
-
-```bash
-npm pack --dry-run
-```
+- Colors: `--ui-color-primary`, `--ui-color-text`, `--ui-color-border`
+- Spacing: `--ui-space-1` through `--ui-space-4`
+- Radius: `--ui-radius-sm`, `--ui-radius-md`, `--ui-radius-lg`
+- Typography: `--ui-font-family`, `--ui-font-size-sm/md`
 
 ## License
 
