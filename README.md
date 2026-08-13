@@ -52,6 +52,16 @@ npm test
 npm run build
 ```
 
+## Component Catalog
+
+Browse every component, state, and prop control locally with Storybook:
+
+```bash
+npm run storybook
+```
+
+The catalog is available at `http://localhost:6006`. Generate a static version with `npm run build-storybook`.
+
 Before publishing, inspect the package contents:
 
 ```bash
