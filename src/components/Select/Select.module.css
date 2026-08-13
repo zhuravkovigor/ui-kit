@@ -1,13 +1,14 @@
 .field {
   display: grid;
   gap: var(--ui-space-2);
+  width: 100%;
 }
 
 .label {
   color: var(--ui-color-text);
   font-family: var(--ui-font-family);
   font-size: var(--ui-font-size-sm);
-  font-weight: 600;
+  font-weight: 500;
   line-height: var(--ui-line-height);
 }
 
@@ -17,6 +18,7 @@
 
 .control {
   position: relative;
+  width: 100%;
 }
 
 .select {
@@ -33,6 +35,7 @@
   justify-content: space-between;
   line-height: var(--ui-line-height);
   min-height: 2.5rem;
+  min-width: 100%;
   outline: none;
   padding: var(--ui-space-2) var(--ui-space-3);
   text-align: start;
@@ -43,13 +46,18 @@
   width: 100%;
 }
 
+.value {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-align: start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .select:hover:not(:disabled) {
   background: var(--ui-color-surface-subtle);
-  border-color: color-mix(
-    in srgb,
-    var(--ui-color-border),
-    var(--ui-color-text) 20%
-  );
+  border-color: var(--ui-color-border-strong);
 }
 
 .select:focus-visible,
@@ -95,8 +103,8 @@
   animation: menu-enter var(--ui-transition-fast);
   background: var(--ui-color-surface);
   border: 1px solid var(--ui-color-border);
-  border-radius: var(--ui-radius-md);
-  box-shadow: 0 0.75rem 2rem color-mix(in srgb, #000000, transparent 75%);
+  border-radius: var(--ui-radius-lg);
+  box-shadow: var(--ui-shadow-menu);
   display: grid;
   gap: var(--ui-space-1);
   inset-block-start: calc(100% + var(--ui-space-2));
@@ -128,9 +136,9 @@
 }
 
 .option[aria-selected="true"] {
-  background: color-mix(in srgb, var(--ui-color-accent), transparent 82%);
-  color: var(--ui-color-accent-hover);
-  font-weight: 600;
+  background: color-mix(in srgb, var(--ui-color-text), transparent 92%);
+  color: var(--ui-color-text);
+  font-weight: 500;
 }
 
 .option:disabled {

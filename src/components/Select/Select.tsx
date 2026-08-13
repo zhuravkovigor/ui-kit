@@ -135,7 +135,13 @@ export const Select = forwardRef<HTMLButtonElement, SelectProps>(
             onClick={() => setIsOpen((open) => !open)}
             onKeyDown={handleKeyDown}
           >
-            <span className={selectedOption ? undefined : styles.placeholder}>
+            <span
+              className={
+                [styles.value, selectedOption ? undefined : styles.placeholder]
+                  .filter(Boolean)
+                  .join(" ")
+              }
+            >
               {selectedOption?.label ?? placeholder}
             </span>
             <span className={styles.chevron} aria-hidden="true" />

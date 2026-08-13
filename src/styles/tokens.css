@@ -1,14 +1,18 @@
 :root {
-  --ui-color-text: #1f1f1f;
-  --ui-color-text-muted: #5f5f5f;
+  --ui-color-text: #0d0d0d;
+  --ui-color-text-muted: #6e6e6e;
   --ui-color-surface: #ffffff;
-  --ui-color-surface-subtle: #f7f7f5;
-  --ui-color-border: #d9d9d6;
+  --ui-color-surface-subtle: #f9f9f9;
+  --ui-color-surface-hover: #ececec;
+  --ui-color-border: #e6e6e6;
+  --ui-color-border-strong: #cdcdcd;
+  --ui-color-primary: #0d0d0d;
+  --ui-color-primary-hover: #2a2a2a;
   --ui-color-accent: #10a37f;
   --ui-color-accent-hover: #0d8c6d;
   --ui-color-danger: #b42318;
-  --ui-color-focus: #1a7f64;
-  --ui-font-family: "Suisse Intl", "Helvetica Neue", sans-serif;
+  --ui-color-focus: #0d0d0d;
+  --ui-font-family: "Suisse Intl", "Inter", "Helvetica Neue", sans-serif;
   --ui-font-size-sm: 0.875rem;
   --ui-font-size-md: 1rem;
   --ui-line-height: 1.5;
@@ -16,10 +20,14 @@
   --ui-space-2: 0.5rem;
   --ui-space-3: 0.75rem;
   --ui-space-4: 1rem;
-  --ui-radius-sm: 0.375rem;
-  --ui-radius-md: 0.5rem;
-  --ui-focus-ring: 0 0 0 3px
-    color-mix(in srgb, var(--ui-color-focus), transparent 70%);
+  --ui-radius-sm: 0.5rem;
+  --ui-radius-md: 0.75rem;
+  --ui-radius-lg: 1rem;
+  --ui-radius-full: 9999px;
+  --ui-focus-ring: 0 0 0 2px var(--ui-color-surface), 0 0 0 4px
+    color-mix(in srgb, var(--ui-color-focus), transparent 60%);
+  --ui-shadow-menu: 0 0.5rem 1.5rem color-mix(in srgb, #000000, transparent 90%),
+    0 0.125rem 0.375rem color-mix(in srgb, #000000, transparent 94%);
   --ui-transition-fast: 150ms ease;
 }
 
