@@ -1,14 +1,22 @@
 import "./styles/index.css";
 
+export { Avatar } from "./components/Avatar";
+export type { AvatarProps } from "./components/Avatar";
 export { Button } from "./components/Button";
 export type { ButtonProps } from "./components/Button";
+export { ChatInput } from "./components/ChatInput";
+export type { ChatInputProps } from "./components/ChatInput";
 export { Checkbox } from "./components/Checkbox";
 export type { CheckboxProps } from "./components/Checkbox";
 export { Input } from "./components/Input";
 export type { InputProps } from "./components/Input";
 export { Fieldset } from "./components/Fieldset";
 export type { FieldsetProps } from "./components/Fieldset";
+export { MessageBubble } from "./components/MessageBubble";
+export type { MessageBubbleProps } from "./components/MessageBubble";
 export { Select } from "./components/Select";
 export type { SelectProps } from "./components/Select";
 export { Textarea } from "./components/Textarea";
 export type { TextareaProps } from "./components/Textarea";
+export { TypingIndicator } from "./components/TypingIndicator";
+export type { TypingIndicatorProps } from "./components/TypingIndicator";

@@ -1,0 +1,63 @@
+.avatar {
+  align-items: center;
+  border-radius: var(--ui-radius-full);
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-family: var(--ui-font-family);
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1;
+  overflow: hidden;
+  user-select: none;
+}
+
+.small {
+  block-size: 1.5rem;
+  font-size: 0.625rem;
+  inline-size: 1.5rem;
+}
+
+.medium {
+  block-size: 2rem;
+  font-size: var(--ui-font-size-sm);
+  inline-size: 2rem;
+}
+
+.large {
+  block-size: 2.5rem;
+  font-size: var(--ui-font-size-md);
+  inline-size: 2.5rem;
+}
+
+.user {
+  background: var(--ui-color-primary);
+  color: var(--ui-color-surface);
+}
+
+.assistant {
+  background: var(--ui-color-accent);
+  color: var(--ui-color-surface);
+}
+
+.neutral {
+  background: var(--ui-color-surface-hover);
+  color: var(--ui-color-text);
+}
+
+.image {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.initials {
+  letter-spacing: 0.02em;
+}
+
+.fallback {
+  background: currentColor;
+  block-size: 40%;
+  border-radius: var(--ui-radius-full);
+  inline-size: 40%;
+  opacity: 0.4;
+}

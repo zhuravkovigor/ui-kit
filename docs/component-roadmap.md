@@ -8,6 +8,15 @@ Build components that extend the existing Button, Input, and Textarea primitives
 - `Select`: label, hint, error, placeholder option, and native keyboard behavior.
 - `Fieldset`: semantic grouping for related controls with shared hint and error content.
 
+## Chat Building Blocks
+
+Components for conversational interfaces, built on top of the form primitives and the shared token system.
+
+- `Avatar`: initials, image, and fallback states with user/assistant color variants.
+- `TypingIndicator`: accessible animated indicator for pending assistant replies.
+- `MessageBubble`: user and assistant messages with avatar, timestamp, and delivery status.
+- `ChatInput`: auto-growing multiline input with Enter-to-send behavior and a send action.
+
 ## Following Release: Feedback And Layout
 
 Add composed UI only after the form primitives share a stable field contract.
@@ -16,6 +25,13 @@ Add composed UI only after the form primitives share a stable field contract.
 - `Card`: a restrained content surface for settings and grouped information.
 - `Divider`: semantic visual separation with horizontal and vertical orientations.
 - `Spinner`: an accessible loading indicator for asynchronous content.
+
+## Later: Chat Composition
+
+- `MessageList`: scrollable conversation container with auto-scroll and date grouping.
+- `CodeBlock`: syntax-highlighted code with a copy action.
+- `MessageActions`: copy, regenerate, and feedback controls for assistant replies.
+- `SuggestionChips`: quick-reply prompts above the chat input.
 
 ## Later: Overlays And Navigation
 
