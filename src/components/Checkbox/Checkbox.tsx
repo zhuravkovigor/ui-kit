@@ -1,4 +1,5 @@
 import { forwardRef, useId, type InputHTMLAttributes } from "react";
+import { Check } from "lucide-react";
 
 import styles from "./Checkbox.module.css";
 
@@ -36,16 +37,21 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     return (
       <div className={styles.field}>
         <label className={styles.control} htmlFor={id}>
-          <input
-            {...props}
-            ref={ref}
-            id={id}
-            required={required}
-            type="checkbox"
-            className={classes}
-            aria-describedby={describedBy}
-            aria-invalid={error ? true : props["aria-invalid"]}
-          />
+          <span className={styles.box}>
+            <input
+              {...props}
+              ref={ref}
+              id={id}
+              required={required}
+              type="checkbox"
+              className={classes}
+              aria-describedby={describedBy}
+              aria-invalid={error ? true : props["aria-invalid"]}
+            />
+            <span className={styles.indicator}>
+              <Check aria-hidden="true" size={12} strokeWidth={3} />
+            </span>
+          </span>
           <span className={styles.label}>
             {label}
             {required ? <span className={styles.required}> *</span> : null}

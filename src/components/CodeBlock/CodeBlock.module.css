@@ -37,10 +37,6 @@
   z-index: 1;
 }
 
-.copyRound {
-  border-radius: var(--ui-radius-full);
-}
-
 .copy:hover {
   background: var(--ui-color-surface-hover);
   color: var(--ui-color-text);

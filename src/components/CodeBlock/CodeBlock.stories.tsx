@@ -64,9 +64,3 @@ export const CSS: Story = {
     language: "css",
   },
 };
-
-export const RoundCopyButton: Story = {
-  args: {
-    copyButtonVariant: "round",
-  },
-};

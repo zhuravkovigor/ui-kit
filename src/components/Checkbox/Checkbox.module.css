@@ -4,7 +4,7 @@
 }
 
 .control {
-  align-items: flex-start;
+  align-items: center;
   color: var(--ui-color-text);
   cursor: pointer;
   display: flex;
@@ -14,20 +14,79 @@
   line-height: var(--ui-line-height);
 }
 
-.checkbox {
-  accent-color: var(--ui-color-accent);
-  block-size: 1rem;
+.box {
+  align-items: center;
+  block-size: 1.25rem;
+  display: inline-flex;
   flex: 0 0 auto;
-  inline-size: 1rem;
-  margin: 0.25rem 0 0;
+  inline-size: 1.25rem;
+  justify-content: center;
+  position: relative;
 }
 
-.checkbox:focus-visible {
+.checkbox {
+  appearance: none;
+  block-size: 100%;
+  cursor: pointer;
+  inline-size: 100%;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.indicator {
+  align-items: center;
+  background: transparent;
+  border: 2px solid var(--ui-color-border-strong);
+  border-radius: var(--ui-radius-sm);
+  block-size: 1.25rem;
+  box-sizing: border-box;
+  color: var(--ui-color-surface);
+  display: inline-flex;
+  inline-size: 1.25rem;
+  justify-content: center;
+  transition:
+    background-color var(--ui-transition-fast),
+    border-color var(--ui-transition-fast);
+}
+
+.indicator svg {
+  opacity: 0;
+  transition: opacity var(--ui-transition-fast);
+}
+
+.checkbox:checked ~ .indicator {
+  background: var(--ui-color-primary);
+  border-color: var(--ui-color-primary);
+}
+
+.checkbox:checked ~ .indicator svg {
+  opacity: 1;
+}
+
+.checkbox:focus-visible ~ .indicator {
   box-shadow: var(--ui-focus-ring);
-  outline: none;
 }
 
-.checkbox:disabled + .label {
+.checkbox:disabled {
+  cursor: not-allowed;
+}
+
+.checkbox:disabled ~ .indicator {
+  opacity: 0.4;
+}
+
+.checkbox:not(:disabled):hover ~ .indicator {
+  border-color: var(--ui-color-border-strong);
+}
+
+.checkbox:not(:disabled):checked:hover ~ .indicator {
+  background: var(--ui-color-primary-hover);
+  border-color: var(--ui-color-primary-hover);
+}
+
+.control:has(.checkbox:disabled) .label {
   color: var(--ui-color-text-muted);
   cursor: not-allowed;
 }

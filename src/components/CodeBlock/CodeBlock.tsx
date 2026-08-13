@@ -9,7 +9,6 @@ export interface CodeBlockProps extends HTMLAttributes<HTMLDivElement> {
   code: string;
   language?: string;
   showLineNumbers?: boolean;
-  copyButtonVariant?: "square" | "round";
   copyLabel?: string;
   copiedLabel?: string;
 }
@@ -19,7 +18,6 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
     {
       className,
       code,
-      copyButtonVariant = "square",
       copyLabel = "Copy code",
       copiedLabel = "Copied",
       language = "text",
@@ -46,7 +44,7 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
       <div {...props} ref={ref} className={classes}>
         <button
           aria-label={copied ? copiedLabel : copyLabel}
-          className={`${styles.copy} ${copyButtonVariant === "round" ? styles.copyRound : ""}`}
+          className={styles.copy}
           onClick={handleCopy}
           type="button"
         >
